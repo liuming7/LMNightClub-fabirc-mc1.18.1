@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "facing=north": { "model": "lmnightclub:block/mixer" },
+    "facing=east": { "model": "lmnightclub:block/mixer" ,"y": 90},
+    "facing=south": { "model": "lmnightclub:block/mixer" ,"y": 180},
+    "facing=west": { "model": "lmnightclub:block/mixer" ,"y": 270}
+  }
+}

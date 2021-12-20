@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "facing=north": { "model": "lmnightclub:block/vinyl_turntable" },
+    "facing=east": { "model": "lmnightclub:block/vinyl_turntable" ,"y": 90},
+    "facing=south": { "model": "lmnightclub:block/vinyl_turntable" ,"y": 180},
+    "facing=west": { "model": "lmnightclub:block/vinyl_turntable" ,"y": 270}
+  }
+}
