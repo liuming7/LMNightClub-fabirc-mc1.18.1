@@ -29,7 +29,8 @@ public class Mixer extends HorizontalFacingBlock {
     private int top;
 
     Item itemMixer = null;
-    BooleanProperty showPanel = null;
+
+    public static final BooleanProperty showPanel = BooleanProperty.of("show_panel");
 
     public Mixer(int west, int east, int north, int south, int bottom, int top, double pixelBit, ItemGroup itemGroup){
         super(FabricBlockSettings.of(Material.WOOD)
@@ -38,9 +39,9 @@ public class Mixer extends HorizontalFacingBlock {
                 .breakByHand(true));
         itemMixer = new BlockItem(this,new Item.Settings().group(itemGroup)
                 .maxCount(1));
-        showPanel = BooleanProperty.of("show_panel");
 
-        setDefaultState(this.stateManager.getDefaultState().with(Properties.HORIZONTAL_FACING, Direction.NORTH));
+        setDefaultState(this.stateManager.getDefaultState().with(Properties.HORIZONTAL_FACING, Direction.NORTH)
+                .with(showPanel,false));
 
         this.west = west;this.east = east;this.north = north;this.south = south;this.bottom = bottom;this.top = top;this.pixelBit = pixelBit;
     }
