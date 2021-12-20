@@ -1,6 +1,7 @@
 package com.lmtech.lmNightClub.lmNightClubGroup;
 
 import com.lmtech.lmNightClub.LMNightClub;
+import com.lmtech.lmNightClub.auxiliary.HorizontalFacingBlockWithEntity;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.block.*;
 import net.minecraft.block.entity.BlockEntity;
@@ -25,7 +26,7 @@ import net.minecraft.world.WorldAccess;
 import net.minecraft.world.WorldView;
 import org.jetbrains.annotations.Nullable;
 
-public class VinylTurntable extends HorizontalFacingBlock{
+public class VinylTurntable extends HorizontalFacingBlockWithEntity {
 
     private double pixelBit;
     private int west;
@@ -81,16 +82,17 @@ public class VinylTurntable extends HorizontalFacingBlock{
         return (BlockState)this.getDefaultState().with(FACING, ctx.getPlayerFacing());
     }
 
-//    @Override
-//    public @Nullable BlockEntity createBlockEntity(BlockView world) {
-//        return new VinylTurntableEntity();
-//    }
-
     public BlockState getStateForNeighborUpdate(BlockState state, Direction direction, BlockState newState, WorldAccess world, BlockPos pos, BlockPos posFrom) {
         return direction == Direction.DOWN && !this.canPlaceAt(state, world, pos) ? Blocks.AIR.getDefaultState() : super.getStateForNeighborUpdate(state, direction, newState, world, pos, posFrom);
     }
 
     public boolean canPlaceAt(BlockState state, WorldView world, BlockPos pos) {
         return sideCoversSmallSquare(world, pos.down(), Direction.UP);
+    }
+
+    @Nullable
+    @Override
+    public BlockEntity createBlockEntity(BlockPos pos, BlockState state) {
+        return null;
     }
 }
