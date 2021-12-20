@@ -1,5 +1,6 @@
-package com.lmtech.lmNightClub;
+package com.lmtech.lmNightClub.lmNightClubGroup;
 
+import com.lmtech.lmNightClub.LMNightClub;
 import net.fabricmc.fabric.api.client.itemgroup.FabricItemGroupBuilder;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
@@ -11,7 +12,7 @@ public class LMNightClubGroup {
 
     private static final ItemGroup NIGHT_CLUB = FabricItemGroupBuilder.build(new Identifier("lmnightclub", "night_club"), () -> new ItemStack(LMNightClubGroup.ITEM_VINYL_TURNTABLE));
 
-    private static final VinylTurntable BLOCK_VINYL_TURNTABLE = new VinylTurntable(1,15,1,15,0,6,LMNightClub.TEXTURES_PIXEL_BIT,NIGHT_CLUB);
+    private static final VinylTurntable BLOCK_VINYL_TURNTABLE = new VinylTurntable(1,15,1,15,0,6, LMNightClub.TEXTURES_PIXEL_BIT,NIGHT_CLUB);
     private static final Item ITEM_VINYL_TURNTABLE = BLOCK_VINYL_TURNTABLE.itemVinylTurntable;
 
     private static final Mixer BLOCK_MIXER = new Mixer(1,15,1,15,0,4,LMNightClub.TEXTURES_PIXEL_BIT,NIGHT_CLUB);
