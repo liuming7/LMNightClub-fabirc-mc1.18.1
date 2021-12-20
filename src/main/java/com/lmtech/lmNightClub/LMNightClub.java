@@ -21,7 +21,7 @@ public class LMNightClub implements ModInitializer {
 		// Proceed with mild caution.
 
 		LOGGER.info("LMNightClub is loading now!");
-
+		LMNightClubGroup.onInitialize(MODID);
 		LOGGER.info("LMNightClub has loaded!");
 
 	}

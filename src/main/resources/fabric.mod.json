@@ -19,11 +19,11 @@
   "environment": "*",
   "entrypoints": {
     "main": [
-      "com.lmtech.lmnightclub.LMNightClub"
+      "com.lmtech.lmNightClub.LMNightClub"
     ]
   },
   "mixins": [
-    "modid.mixins.json"
+    "lmnightclub.mixins.json"
   ],
 
   "depends": {

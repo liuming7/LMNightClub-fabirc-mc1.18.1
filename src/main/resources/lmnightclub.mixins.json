@@ -1,12 +1,12 @@
 {
   "required": true,
   "minVersion": "0.8",
-  "package": "com.lmtech.lmNightClub.mixin.",
+  "package": "com.lmtech.lmNightClub.mixin",
   "compatibilityLevel": "JAVA_16",
   "mixins": [
   ],
   "client": [
-    "com.lmtech.lmNightClub.mixin.LMNightClubMixin"
+    "LMNightClubMixin"
   ],
   "injectors": {
     "defaultRequire": 1
