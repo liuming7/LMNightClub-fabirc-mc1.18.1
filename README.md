@@ -4,6 +4,17 @@
 
 Let's hold a party. It gotta be crazy!
 
-## License
+This mod add some night club equipments.
 
-This mod is available under the CC0 license. Feel free to learn from it and incorporate it in your own projects.
+This plugin is Minecraft JE v1.18.1 .
+
+## Usage
+
+* Before using it, you should make sure you already have fabric installed on your Minecraft Java Edition
+
+* Download it, unzip it and put it into the folder 'resource pack' or so on
+
+* The end
+
+
+![Image text]()
